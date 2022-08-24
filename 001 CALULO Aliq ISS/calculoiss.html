@@ -16,44 +16,54 @@
                 <div id="iss">
                     <img src="imagens/iss-nfes.png" alt="iss-nfes">
                 </div>
-                <div class="anexo_um">
-                    <div class="container_um">
-                        <h3>Anexo I</h3>
-                    </div>
-                    <div class="faturamento" id="a1">
+                <div class="container" id="q3">
+                    <h3>Anexo I</h3>
+                </div>
+                <div class="container" id="q4">
+                    
+                    <div class="container" id="a1">
                         <h5>12 Ultimos meses</h5>
                         <input type="number" id="tab1" >
                     </div>
-                    <div class="aliquota" id="a1">
+                    <div class="container" id="a1">
                         <h5>Alíq.</h5>
                         <input type="number" id="tab2">
                     </div>
-                    <div class="deducao" id="a1">
+                    <div class="container" id="a1">
                         <h5>Dedução</h5>
                         <input type="number" id="tab3">
                     </div>
-                    <div id="calcular">
+                    <div class="container" id="a1">
+                        <h5>PRT</h5>
+                        <input type="number" id="tab4">
+                    </div>
+                    <div class="container" id="a1">
                         <input type="button" value="calcular" onclick="Cal1()" id="button_1">
                     </div>
-                    <div class="aliquota_iss" id="aliquota">
+                    <div class="container" id="aliquota">
                         <h5>Al.ISS</h5>
-                        <p id="x1">x</p>
+                        <p id="x1">-</p>
                     </div>
                 </div>
          </div>
+         
       </main>
       <script>
-           function Cal1(){
-               let f = Number(tab1.value)
-               let a = Number(tab2.value)
-               let d = Number(tab3.value)
-               let resultado = (f * (a / 100)) - d;
-               let iss = (resultado / f) * (32.50 / 100) * 100;
-               let aliqiss = iss.toFixed(2).replace('.',',')
-               x1.innerHTML = `${aliqiss}`
-               
-           }
-      </script> 
+        function Cal1(){
+            let f = Number(tab1.value)
+            let a = Number(tab2.value)
+            let d = Number(tab3.value)
+            let p = Number(tab4.value)
+            let prt = p / 100
+            let resultado = (((f * (a / 100)) - d) / f) * p;
+            let prtiss = resultado.toFixed(2).replace('.',',')
+            x1.innerHTML = `${prtiss}`
+        }  
+        </script> 
+            
+          
+         
+      
 </body>
 </html>       
                 
