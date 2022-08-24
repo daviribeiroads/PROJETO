@@ -1,0 +1,92 @@
+@charset "UTF-";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.root{
+    
+}
+
+body{
+    height: 95vh;
+    background: rgb(98, 203, 238) url('imagens/conta.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+.container#q1{
+   background-color: white;
+   position: absolute;
+   width: 500px;
+   height: 500px;
+   border: 1px solid black;
+   border-radius: 10px;
+   transform: translate(-50%, -50%);
+   left: 50%;
+   top: 50%;
+   max-width: 700px;
+   
+}
+
+#iss img{
+   display: inline-block;
+   padding-top: 5%;
+   padding-left: 30%;
+}
+
+.container#q2{
+    background-color: rgb(0, 247, 255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgb(147, 145, 145);
+   
+}
+
+/*--!--ANEXO I--!--*/
+.anexo_um{
+    padding-left: 6%;
+}
+
+.faturamento#a1, input{
+    display: inline-block;
+    width: 140px;
+    
+}
+h5{
+    text-align: center;
+}
+.aliquota#a1{
+    display: inline-block;
+    text-align: center;
+    padding-left: 1%;
+}
+
+#tab1{
+    text-align: center;
+}
+
+#tab2{
+    width: 30px;
+    text-align: center;
+}
+
+.deducao#a1{
+    display: inline-block;
+}
+#aliquota{
+    display: inline-block;
+    text-align: center;
+    padding-left: 8px;
+}
+#button_1{
+    display: inline-block;
+    width: 50px;
+}
+#calcular{
+    display: inline-block;
+}
+#x1{
+    
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alíquota issqn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <main>
+         <div class="container" id="q1">
+                <div class="container" id="q2">
+                    <h3>CALCULO DE ALÍQUOTA DE ISSQN NFSe</h3>
+                </div>
+                <div id="iss">
+                    <img src="imagens/iss-nfes.png" alt="iss-nfes">
+                </div>
+                <div class="anexo_um">
+                    <div class="container_um">
+                        <h3>Anexo I</h3>
+                    </div>
+                    <div class="faturamento" id="a1">
+                        <h5>12 Ultimos meses</h5>
+                        <input type="number" id="tab1" >
+                    </div>
+                    <div class="aliquota" id="a1">
+                        <h5>Alíq.</h5>
+                        <input type="number" id="tab2">
+                    </div>
+                    <div class="deducao" id="a1">
+                        <h5>Dedução</h5>
+                        <input type="number" id="tab3">
+                    </div>
+                    <div id="calcular">
+                        <input type="button" value="calcular" onclick="Cal1()" id="button_1">
+                    </div>
+                    <div class="aliquota_iss" id="aliquota">
+                        <h5>Al.ISS</h5>
+                        <p id="x1">x</p>
+                    </div>
+                </div>
+         </div>
+      </main>
+      <script>
+           function Cal1(){
+               let f = Number(tab1.value)
+               let a = Number(tab2.value)
+               let d = Number(tab3.value)
+               let resultado = (f * (a / 100)) - d;
+               let iss = (resultado / f) * (32.50 / 100) * 100;
+               let aliqiss = iss.toFixed(2).replace('.',',')
+               x1.innerHTML = `${aliqiss}`
+               
+           }
+      </script> 
+</body>
+</html>       
+                
+      
+             
