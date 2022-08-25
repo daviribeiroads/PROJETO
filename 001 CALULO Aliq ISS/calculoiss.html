@@ -21,33 +21,41 @@
                 </div>
                 <div class="container" id="a1">
                     <div class="container" id="a1">
-                        <h5>12 Ultimos meses</h5>
-                        <input type="number" id="tab1" >
+                        <abbr title="Receita bruta dos 12 ultimos meses">
+                            <h5>12 Ultimos meses</h5>
+                            <input type="number" id="tab1" >
+                        </abbr>
                     </div>
                     <div class="container" id="a1">
-                        <h5>Alíq.</h5>
-                        <input type="number" id="tab2">
+                        <abbr title="Alíquota da receita bruta conforme FAIXA">
+                            <h5>Alíq.</h5>
+                            <input type="number" id="tab2">
+                        </abbr>
                     </div>
                     <div class="container" id="a1">
-                        <h5>Dedução</h5>
-                        <input type="number" id="tab3">
+                        <abbr title="Dedução do simples conforme FAIXA">
+                            <h5>Dedução</h5>
+                            <input type="number" id="tab3">
+                        </abbr>
                     </div>
                     <div class="container" id="a1">
-                        <h5>PRT</h5>
-                        <input type="number" id="tab4">
+                        <abbr title="Percentual de Repartição do ISS conforme FAIXA">
+                            <h5>PRT</h5>
+                            <input type="number" id="tab4">
+                        </abbr>
                     </div>
                     <div class="container" id="a1">
                         <input type="button" value="calcular" onclick="Cal1()" id="button_1">
                     </div>
                     <div class="container" id="aliquota">
-                        <h5>Al.ISS</h5>
-                        <p id="x1">-</p>
+                        <abbr title="Alíquota que vai usar na nota">
+                            <h5>Al.ISS</h5>
+                        </abbr>
+                            <p id="x1">-</p>
                     </div>
                 </div>
-         </div>
-                    
-         
-      </main>
+         </div>    
+     </main>
       <script>
         function Cal1(){
             let f = Number(tab1.value)
@@ -59,13 +67,6 @@
             let prtiss = resultado.toFixed(2).replace('.',',')
             x1.innerHTML = `${prtiss}`
         }  
-        </script> 
-            
-          
-         
-      
+        </script>                
 </body>
-</html>       
-                
-      
-             
+</html>  
